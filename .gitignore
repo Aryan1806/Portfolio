@@ -9,7 +9,7 @@
 /coverage
 
 # next.js
-/.bolt
+/.bolt/
 /.next/
 /out/
 
