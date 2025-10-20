@@ -85,7 +85,7 @@ export default function Hero() {
               <Button
                 size="lg"
                 onClick={() => scrollToSection('contact')}
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white"
+                className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white dark:text-foreground"
               >
                 <Mail className="mr-2 h-5 w-5" />
                 Contact Me
@@ -108,14 +108,14 @@ export default function Hero() {
           <div className="hidden lg:block">
             <div className="relative">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg blur opacity-25"></div>
-              <div className="relative bg-gray-900 rounded-lg p-6 shadow-2xl">
+              <div className="relative bg-card border border-border rounded-lg p-6 shadow-2xl">
                 <div className="flex items-center space-x-2 mb-4">
                   <div className="w-3 h-3 rounded-full bg-red-500"></div>
                   <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                  <span className="ml-2 text-sm text-gray-400">developer.js</span>
+                  <span className="ml-2 text-sm text-muted-foreground">developer.js</span>
                 </div>
-                <pre className="text-sm text-green-400 font-mono overflow-x-auto">
+                <pre className="text-sm text-emerald-400 dark:text-emerald-300 font-mono overflow-x-auto">
                   <code>{displayedCode}<span className="animate-pulse">|</span></code>
                 </pre>
               </div>

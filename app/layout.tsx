@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import { Toaster } from '@/components/ui/toaster';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -20,10 +21,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={poppins.className}>
-        {children}
-        <Toaster />
+        <ThemeProvider>
+          {children}
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );

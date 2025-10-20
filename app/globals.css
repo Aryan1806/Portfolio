@@ -6,6 +6,9 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 222 47% 11%;
+    --heading: 222 47% 11%;
+    --link: 221 83% 53%;
+    --muted-text: 215 16% 47%;
     --card: 0 0% 100%;
     --card-foreground: 222 47% 11%;
     --popover: 0 0% 100%;
@@ -29,6 +32,9 @@
   .dark {
     --background: 222 47% 11%;
     --foreground: 210 40% 98%;
+    --heading: 210 40% 98%;
+    --link: 192 100% 65%;
+    --muted-text: 215 20% 65%;
     --card: 222 47% 11%;
     --card-foreground: 210 40% 98%;
     --popover: 222 47% 11%;
@@ -50,10 +56,6 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
@@ -62,11 +64,36 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold;
     line-height: 1.2;
+    color: hsl(var(--heading));
   }
 
   p {
     line-height: 1.6;
+    color: hsl(var(--foreground));
   }
+}
+
+/* Links and accent text */
+a, .link {
+  color: hsl(var(--link));
+  text-decoration: underline 1px rgba(0,0,0,0);
+}
+
+.dark a, .dark .link {
+  color: hsl(var(--link));
+}
+
+/* Subtle muted text for captions */
+.muted, .text-muted {
+  color: hsl(var(--muted-text));
+}
+
+/* Decorative gradient headings */
+.heading-gradient {
+  background: linear-gradient(90deg, hsl(var(--link)), hsl(var(--ring)));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .bg-grid-pattern {

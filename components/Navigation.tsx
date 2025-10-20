@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const navItems = [
   { name: 'Home', href: '#home' },
@@ -70,6 +71,9 @@ export default function Navigation() {
                 {item.name}
               </a>
             ))}
+            <div className="ml-2">
+              <ThemeToggle />
+            </div>
           </div>
 
           <button
@@ -102,6 +106,9 @@ export default function Navigation() {
                 {item.name}
               </a>
             ))}
+            <div className="px-3 py-2">
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       )}
