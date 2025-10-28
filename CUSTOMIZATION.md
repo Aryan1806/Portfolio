@@ -56,20 +56,9 @@ Modify the `education` array with your academic background:
 - `duration`: Time period
 - `description`: Additional details (optional)
 
-## 2. Blog Integration
+## 2. Blog Integration (removed)
 
-The portfolio fetches blog posts from Dev.to API by default. To show your own posts:
-
-1. Create an account at [dev.to](https://dev.to)
-2. Write and publish blog posts
-3. Update the fetch URL in `/components/Blog.tsx`:
-   ```typescript
-   const response = await fetch('https://dev.to/api/articles?username=YOUR_USERNAME');
-   ```
-
-Alternatively, you can:
-- Remove the Blog section if you don't have a blog
-- Integrate with another blogging platform's API
+This template previously included an optional Blog section that fetched posts from the Dev.to API. The Blog section has been removed from this project. If you want to re-enable blog functionality in the future, add a Blog component and update these docs with the desired provider and fetch URL.
 
 ## 3. Contact Form
 
