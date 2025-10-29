@@ -2,7 +2,7 @@ import { PersonalInfo, Skill, Project, Experience, Education } from '@/types/por
 
 export const personalInfo: PersonalInfo = {
   name: "Aryan Chandrakar",
-  title: "Full Stack Developer",
+  title: "Software Developer",
   bio: "I’m a passionate full-stack developer and problem solver pursuing B.Tech in Computer Science at IIIT Naya Raipur. I specialize in building scalable, secure, and high-performance web applications using modern technologies. My interests span across AI, ML, and full-stack development, and I love turning ideas into impactful digital solutions.",
   email: "aryanchandrakar289@gmail.com",
   phone: "+91 7970018603",

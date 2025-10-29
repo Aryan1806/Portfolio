@@ -24,6 +24,17 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data?.error || 'Failed to send');
+      }
+
       toast({
         title: 'Message sent!',
         description: 'Thank you for reaching out. I will get back to you soon.',
